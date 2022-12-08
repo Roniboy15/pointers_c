@@ -187,6 +187,7 @@ int main () {
  heapcup
  */
 
+/*
 int main(void) {
     
     int T;
@@ -241,4 +242,26 @@ int main(void) {
     
 }
 
+*/
+//strcmp
+int checkString (char *p1, char *p2){
+    
+    int sum1 = 0, sum2 = 0;
+    while (*p1 != 0 || *p2 != 0) {
+        sum1 += *p1;
+        sum2 += *p2;
+        if(*p1 != 0)p1++;
+        if(*p2 != 0)p2++;
+    }
+    if(sum1 > sum2)return 1;
+    else if(sum1 < sum2)return -1;
+    else return 0;
+}
 
+int main () {
+    char str1[] = "abC";
+    char str2[] = "abc";
+    
+    printf("%d\n",checkString(str1, str2));
+    
+}
